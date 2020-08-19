@@ -32,7 +32,7 @@ def CountAddMult():
 
         print("Added {} day(s), it has now been {} day(s)".format(addCount, char))
     else:
-        ("ERROR: Argument is not an ingiger")
+        print("ERROR: Argument is not an ingiger")
 
 def CountSub():
     rf = open('data2.txt', 'r') 
@@ -64,13 +64,11 @@ def CountSubMult():
             rf.close()
             with open('data2.txt', 'w') as f:
                 f.write(str(char))
+            print("Removed {} day(s), it has now been {} day(s)".format(addCount, char))
         else:
             print("ERROR: Day count is not an integer")
-        print("Removed {} day(s), it has now been {} day(s)".format(addCount, char))
-    
     else:
-        input()
-        input("ERROR Argument is not an intiger")
+        print("ERROR Argument is not an intiger")
         
 
 def Reset():
@@ -80,9 +78,12 @@ def Reset():
 
 def Set():
     setTo = input("What will you set the days to?: ")
-    with open('data2.txt', 'w') as f:
-        f.write(setTo)
-    print("The day count has been set to " + setTo)
+    if setTo.isdigit():
+        with open('data2.txt', 'w') as f:
+            f.write(setTo)
+        print("The day count has been set to " + setTo)
+    else:
+        print("ERROR Argument is not an intiger")
 
 def Kill():
     

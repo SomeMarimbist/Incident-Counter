@@ -1,18 +1,23 @@
 import json
 
 def ReadReport():
-    index = int(input("Input entry number: "))
-    with open('incident_log.json', 'r') as myfile:
-        data = myfile.read()
+    try:
+        index = int(input("Input entry number: "))
+        with open('incident_log.json', 'r') as myfile:
+            data = myfile.read()
 
-    # parse file
-    obj = json.loads(data)
+            # parse file
+            obj = json.loads(data)
 
-    # show values
-    print("Name: {}".format(obj['reports'][index]['name']))
-    print("Date: {}".format(obj['reports'][index]['date']))
-    print("Type: {}".format(obj['reports'][index]['incidentType']))
-    print("Info: {}".format(obj['reports'][index]['otherInfo']))
+            # show values
+            print("Name: {}".format(obj['reports'][index]['name']))
+            print("Date: {}".format(obj['reports'][index]['date']))
+            print("Type: {}".format(obj['reports'][index]['incidentType']))
+            print("Info: {}".format(obj['reports'][index]['otherInfo']))
+    except:
+        input("ERROR: Argument is not an intiger")
+    
+
 
 def WriteReport():
     
