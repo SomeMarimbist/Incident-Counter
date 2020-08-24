@@ -22,7 +22,7 @@ def setDisplay(number):
     temp = [int(x) for x in str(number)]
     length = len(temp)
     for i in range(length):
-        split[(3 - length + i)] = temp(i)
+        split[(3 - length + i)] = temp[i]
     off()
     for place in range(3):
         if split[place] == 0:
