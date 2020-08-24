@@ -1,39 +1,19 @@
 import board
 import neopixel
 
-ledHundreds = neopixel.NeoPixel(board.D18, 21, bpp=3)
-ledTens = neopixel.NeoPixel(board.D20, 21, bpp=3)
-ledOnes = neopixel.NeoPixel(board.D21, 21, bpp=3)
+leds = neopixel.NeoPixel(board.D18, 63, bpp=3)
+light1 = [1, ]
 lines = []
 
 
 def off():
-    for i in range(3):
-        if i == 0:
-            for j in range(21):
-                ledHundreds[j] = (0,0,0)
-        if i == 1:
-            for j in range(21):
-                ledTens[j] = (0,0,0)
-        if i == 2:
-            for j in range(21):
-                ledOnes[j] = (0,0,0)
-        
-        
+    for j in range(63):
+            leds[j] = (0,0,0)
 
 def on(lightNum, digit):
-    if digit == 0:
-        ledHundreds[(lightNum*3) + i] = (255, 0, 0)
+    for i in range(3):
+        leds[digit*21 + (lightNum*3) + i] = (255, 0, 0)
         print(lightNum)
-
-    if digit == 1:
-        ledTens[(lightNum*3) + i] = (255, 0, 0)
-        print(lightNum)
-
-    if digit == 2:
-        ledOnes[(lightNum*3) + i] = (255, 0, 0)
-        print(lightNum)
-    
 
 
 def setDisplay(number):
