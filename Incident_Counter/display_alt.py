@@ -13,7 +13,7 @@ def off():
 
 def on(lightNum):
     for i in range(3):
-        leds[3(lightnum) + i] = (255, 0, 0)
+        leds[3(lightNum) + i] = (255, 0, 0)
 
 
 def setDisplay(number):
@@ -79,5 +79,6 @@ def setDisplay(number):
             on(6)
             on(1)
             on(2)
+        leds.show()
 
 setDisplay(0)
