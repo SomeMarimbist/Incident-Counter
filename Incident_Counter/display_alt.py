@@ -1,7 +1,7 @@
 import board
 import neopixel
 
-leds = neopixel.NeoPixel(board.D18, 21, auto_write=False)
+leds = neopixel.NeoPixel(board.D18, 21, bpp=3)
 light1 = [1, ]
 lines = []
 
@@ -14,7 +14,7 @@ def off():
 def on(lightNum):
     for i in range(3):
         lightNum = (lightNum*3) + i
-        leds[lightNum] = (255, 0, 0, 0)
+        leds[lightNum] = 0x100000
 
 
 def setDisplay(number):
