@@ -14,6 +14,7 @@ def off():
 def on(lightNum):
     for i in range(4):
         lightNum = (lightNum*3) + i
+        print(lightNum)
         leds[lightNum] = (255, 0, 0)
 
 
