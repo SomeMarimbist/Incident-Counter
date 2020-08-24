@@ -83,4 +83,3 @@ def setDisplay(number):
             on(1, place)
         leds.show()
 
-setDisplay(1)
