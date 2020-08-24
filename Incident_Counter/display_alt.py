@@ -5,6 +5,17 @@ leds = neopixel.NeoPixel(board.D18, 21, auto_write=False)
 light1 = [1, ]
 lines = []
 
+
+def off():
+    for i in range(3):
+        for j in range(21):
+            leds[j] = (0,0,0)
+
+def on(lightNum):
+    for i in range(3):
+        leds[3(lightnum) + i] = (255, 0, 0)
+
+
 def setDisplay(number):
     split = [int(x) for x in str(number)]
     off()
@@ -70,12 +81,3 @@ def setDisplay(number):
             on(2)
 
 setDisplay(0)
-
-def off():
-    for i in range(3):
-        for j in range(21):
-            leds[j] = (0,0,0)
-
-def on(lightNum):
-    for i in range(3):
-        leds[3(lightnum) + i] = (255, 0, 0)
