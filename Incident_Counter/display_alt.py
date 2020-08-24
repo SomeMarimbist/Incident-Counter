@@ -9,8 +9,17 @@ lines = []
 
 def off():
     for i in range(3):
-        for j in range(21):
-            leds[j] = (0,0,0)
+        if i == 0:
+            for j in 21:
+                ledHundreds[j] = (0,0,0)
+        if i == 1:
+            for j in 21:
+                ledTens[j] = (0,0,0)
+        if i == 2:
+            for j in 21:
+                ledOnes[j] = (0,0,0)
+        
+        
 
 def on(lightNum, digit):
     if digit == 0:
