@@ -4,7 +4,6 @@ import neopixel
 leds = neopixel.NeoPixel(board.D18, 21, auto_write=False)
 light1 = [1, ]
 lines = []
-setDisplay(0)
 
 def setDisplay(number):
     split = [int(x) for x in str(number)]
@@ -69,6 +68,8 @@ def setDisplay(number):
             on(6)
             on(1)
             on(2)
+
+setDisplay(0)
 
 def off():
     for i in range(3):
