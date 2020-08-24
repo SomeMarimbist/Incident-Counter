@@ -2,8 +2,6 @@ import board
 import neopixel
 
 leds = neopixel.NeoPixel(board.D18, 63, bpp=3)
-light1 = [1, ]
-lines = []
 
 
 def off():

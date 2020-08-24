@@ -1,5 +1,6 @@
 from time import sleep
 from datetime import datetime
+import display_alt
 
 char = "null"
 coolDown = False
@@ -24,6 +25,7 @@ def Counter():
         rf.close()
         with open('data2.txt', 'w') as f:
             f.write(str(char))
+        display_alt.setDisplay(char)
     else:
         print("ERROR: Day count is not an integer")
 
