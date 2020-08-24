@@ -1,7 +1,7 @@
 import board
 import neopixel
 
-leds = neopixel.NeoPixel(board.D18, qty, auto_write=False)
+leds = neopixel.NeoPixel(board.D18, 21, auto_write=False)
 light1 = [1, ]
 lines = []
 setDisplay(0)
