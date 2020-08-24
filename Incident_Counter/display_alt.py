@@ -18,7 +18,10 @@ def on(lightNum):
 
 
 def setDisplay(number):
-    split = [int(x) for x in str(number)]
+    split = [0, 0, 0]
+    temp = [int(x) for x in str(number)]
+    for i in len(temp):
+        split[(3 - len(temp)+ i)] = temp(i)
     off()
     for place in range(3):
         if split[place] == 0:
