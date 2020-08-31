@@ -1,4 +1,4 @@
-import display_alt
+#import display_alt
 
 def CountAdd():
     print("AAAAAAHHHHHH")
@@ -12,7 +12,7 @@ def CountAdd():
         rf.close()
         with open('data2.txt', 'w') as f:
             f.write(str(char))
-        display_alt.setDisplay(char)
+        #display_alt.setDisplay(char)
     else:
         print("ERROR: Day count is not an integer")
 
@@ -30,7 +30,7 @@ def CountAddMult():
             rf.close()
             with open('data2.txt', 'w') as f:
                 f.write(str(char))
-            display_alt.setDisplay(char)
+            #display_alt.setDisplay(char)
         else:
             print("ERROR: Day count is not an integer")
 
@@ -49,7 +49,7 @@ def CountSub():
         rf.close()
         with open('data2.txt', 'w') as f:
             f.write(str(char))
-        display_alt.setDisplay(char)
+        #display_alt.setDisplay(char)
     else:
         print("ERROR: Day count is not an integer")
 
@@ -68,7 +68,7 @@ def CountSubMult():
             rf.close()
             with open('data2.txt', 'w') as f:
                 f.write(str(char))
-            display_alt.setDisplay(char)
+            #display_alt.setDisplay(char)
             print("Removed {} day(s), it has now been {} day(s)".format(addCount, char))
         else:
             print("ERROR: Day count is not an integer")
