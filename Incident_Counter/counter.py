@@ -2,7 +2,7 @@ from time import sleep
 from datetime import datetime
 import display_alt
 
-#! /usr/bin/env python
+#!/usr/bin/env python3
 char = "null"
 coolDown = False
 print("booted")
