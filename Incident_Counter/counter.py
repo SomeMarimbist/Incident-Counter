@@ -2,6 +2,7 @@ from time import sleep
 from datetime import datetime
 import display_alt
 
+#! /usr/bin/env python
 char = "null"
 coolDown = False
 
