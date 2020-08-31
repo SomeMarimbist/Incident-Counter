@@ -5,6 +5,7 @@ import display_alt
 #! /usr/bin/env python
 char = "null"
 coolDown = False
+print("booted")
 
 def Counter():
     global char
