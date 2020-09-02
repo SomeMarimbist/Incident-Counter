@@ -6,7 +6,13 @@ import display_alt
 char = "null"
 coolDown = False
 print("booted")
-display_alt.setDisplay(200)
+display_alt.setDisplay(000)
+
+def test():
+    while true:
+        print("I'm running")
+
+test()
 
 def Counter():
     global char
