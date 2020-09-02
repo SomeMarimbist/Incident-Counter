@@ -92,7 +92,7 @@ def Set():
 
 def Kill():
     
-    exit("counter.py")
+    exit()
 
 def PrintDays():
     with open ('data2.txt', 'r') as f:
