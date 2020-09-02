@@ -9,7 +9,7 @@ print("booted")
 display_alt.setDisplay(000)
 
 def test():
-    while true:
+    while True:
         print("I'm running")
 
 test()
