@@ -1,7 +1,6 @@
 from time import sleep
 from commandsLib import *
 from getpass import getpass
-import display_alt
 
 import json
 from jsonEditor import *
