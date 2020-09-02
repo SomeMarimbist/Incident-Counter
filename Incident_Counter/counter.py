@@ -5,14 +5,10 @@ import display_alt
 #!/usr/bin/env python3
 char = "null"
 coolDown = False
-print("booted")
-display_alt.setDisplay(000)
 
-def test():
-    while True:
-        print("I'm running")
-
-test()
+rf = open('data2.txt', 'r') 
+rf.seek(0)
+display_alt.setDisplay(str(rf.read(3)))
 
 def Counter():
     global char
