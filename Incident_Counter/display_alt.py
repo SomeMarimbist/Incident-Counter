@@ -1,5 +1,6 @@
 import board
 import neopixel
+import time
 
 leds = neopixel.NeoPixel(board.D18, 63, bpp=3)
 
@@ -91,11 +92,11 @@ def rainbow():
             for i in range(63):
                 pixel_index = (i * 256 // 63) + j
                 leds[i] = wheel(pixel_index & 255)
-            for j in range(18, 20):
+            for j in range(18, 21):
                 leds[j] = (0,0,0)
-            for j in range(36, 38):
+            for j in range(36, 39):
                 leds[j] = (0,0,0)
-            for j in range(48, 50):
+            for j in range(48, 51):
                 leds[j] = (0,0,0)
             
             leds.show()
