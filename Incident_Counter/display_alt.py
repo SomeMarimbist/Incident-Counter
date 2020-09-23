@@ -87,10 +87,9 @@ def setDisplay(number):
 
 def rainbow():
     while True:
-        global qty
         for j in range(255):
-            for i in range(qty):
-                pixel_index = (i * 256 // qty) + j
+            for i in range(63):
+                pixel_index = (i * 256 // 63) + j
                 leds[i] = wheel(pixel_index & 255)
             for j in range(18, 20):
                 leds[j] = (0,0,0)
