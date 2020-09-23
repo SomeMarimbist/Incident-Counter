@@ -20,8 +20,9 @@ def setDisplay(number):
     length = len(temp)
     for i in range(length):
         split[(3 - length + i)] = temp[i]
-    print(split)
     off()
+    if split == [0, 6, 9]:
+        rainbow()
     for place in range(3):
         if split[place] == 0:
             on(0, place)
@@ -84,3 +85,38 @@ def setDisplay(number):
             on(1, place)
     leds.show()
 
+def rainbow():
+    while True:
+        global qty
+        for j in range(255):
+            for i in range(qty):
+                pixel_index = (i * 256 // qty) + j
+                leds[i] = wheel(pixel_index & 255)
+            for j in range(18, 20):
+                leds[j] = (0,0,0)
+             for j in range(36, 38):
+                leds[j] = (0,0,0)
+             for j in range(48, 50):
+                leds[j] = (0,0,0)
+            
+            leds.show()
+            time.sleep(0.5)
+#Wheel is used by the rainbow to...rainbow
+def wheel(pos):
+    if pos < 0 or pos > 255:
+        r = g = b = 0
+    elif pos < 85:
+        r = int(pos * 3)
+        g = int(255 - pos * 3)
+        b = 0
+    elif pos < 170:
+        pos -= 85
+        r = int(255 - pos * 3)
+        g = 0
+        b = int(pos * 3)
+    else:
+        pos -= 170
+        r = 0
+        g = int(pos * 3)
+        b = int(255 - pos * 3)
+    return (r, g, b)
