@@ -16,6 +16,7 @@ def on(lightNum, digit):
 def setDisplay(number):
     split = [0, 0, 0]
     temp = [int(x) for x in str(number)]
+    print(temp)
     length = len(temp)
     for i in range(length):
         split[(3 - length + i)] = temp[i]
@@ -80,5 +81,5 @@ def setDisplay(number):
             on(5, place)
             on(0, place)
             on(1, place)
-        leds.show()
+    leds.show()
 
