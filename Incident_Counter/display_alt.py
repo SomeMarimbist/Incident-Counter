@@ -21,65 +21,65 @@ def setDisplay(number):
         split[(3 - length + i)] = temp[i]
     print(split)
     off()
-    for place in range(3):
-        if split[place] == 0:
-            on(0, place)
-            on(1, place)
-            on(2, place)
-            on(3, place)
-            on(4, place)
-            on(5, place)
-        if split[place] == 1:
-            on(0, place)
-            on(5, place)
-        if split[place] == 2:
-            on(4, place)
-            on(5, place)
-            on(6, place)
-            on(2, place)
-            on(1, place)
-        if split[place] == 3:
-            on(4, place)
-            on(5, place)
-            on(6, place)
-            on(0, place)
-            on(1, place)
-        if split[place] == 4:
-            on(3, place)
-            on(6, place)
-            on(5, place)
-            on(0, place)
-        if split[place] == 5:
-            on(4, place)
-            on(3, place)
-            on(6, place)
-            on(0, place)
-            on(1, place)
-        if split[place] == 6:
-            on(4, place)
-            on(3, place)
-            on(2, place)
-            on(1, place)
-            on(0, place)
-            on(6, place)
-        if split[place] == 7:
-            on(4, place)
-            on(5, place)
-            on(0, place)
-        if split[place] == 8:
-            on(0, place)
-            on(1, place)
-            on(2, place)
-            on(3, place)
-            on(4, place)
-            on(5, place)
-            on(6, place)
-        if split[place] == 9:
-            on(6, place)
-            on(3, place)
-            on(4, place)
-            on(5, place)
-            on(0, place)
-            on(1, place)
+    # for place in range(3):
+    #     if split[place] == 0:
+    #         on(0, place)
+    #         on(1, place)
+    #         on(2, place)
+    #         on(3, place)
+    #         on(4, place)
+    #         on(5, place)
+    #     if split[place] == 1:
+    #         on(0, place)
+    #         on(5, place)
+    #     if split[place] == 2:
+    #         on(4, place)
+    #         on(5, place)
+    #         on(6, place)
+    #         on(2, place)
+    #         on(1, place)
+    #     if split[place] == 3:
+    #         on(4, place)
+    #         on(5, place)
+    #         on(6, place)
+    #         on(0, place)
+    #         on(1, place)
+    #     if split[place] == 4:
+    #         on(3, place)
+    #         on(6, place)
+    #         on(5, place)
+    #         on(0, place)
+    #     if split[place] == 5:
+    #         on(4, place)
+    #         on(3, place)
+    #         on(6, place)
+    #         on(0, place)
+    #         on(1, place)
+    #     if split[place] == 6:
+    #         on(4, place)
+    #         on(3, place)
+    #         on(2, place)
+    #         on(1, place)
+    #         on(0, place)
+    #         on(6, place)
+    #     if split[place] == 7:
+    #         on(4, place)
+    #         on(5, place)
+    #         on(0, place)
+    #     if split[place] == 8:
+    #         on(0, place)
+    #         on(1, place)
+    #         on(2, place)
+    #         on(3, place)
+    #         on(4, place)
+    #         on(5, place)
+    #         on(6, place)
+    #     if split[place] == 9:
+    #         on(6, place)
+    #         on(3, place)
+    #         on(4, place)
+    #         on(5, place)
+    #         on(0, place)
+    #         on(1, place)
     leds.show()
 

@@ -12,7 +12,6 @@ def CountAdd():
         rf.close()
         with open('data2.txt', 'w') as f:
             f.write(str(char))
-        print(char)
         display_alt.setDisplay(char)
     else:
         print("ERROR: Day count is not an integer")
