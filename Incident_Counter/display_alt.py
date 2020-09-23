@@ -94,9 +94,9 @@ def rainbow():
                 leds[i] = wheel(pixel_index & 255)
             for j in range(18, 20):
                 leds[j] = (0,0,0)
-             for j in range(36, 38):
+            for j in range(36, 38):
                 leds[j] = (0,0,0)
-             for j in range(48, 50):
+            for j in range(48, 50):
                 leds[j] = (0,0,0)
             
             leds.show()
