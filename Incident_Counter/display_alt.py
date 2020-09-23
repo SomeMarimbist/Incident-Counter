@@ -2,7 +2,7 @@ import board
 import neopixel
 import time
 
-leds = neopixel.NeoPixel(board.D18, 63, bpp=3)
+leds = neopixel.NeoPixel(board.D18, 63, bpp=3, auto_write = False)
 
 
 def off():
