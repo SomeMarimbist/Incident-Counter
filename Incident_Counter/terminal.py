@@ -17,12 +17,13 @@ reportChoice = "null"
 password = "egg"
 enteredPass = "null"
 
-def EndCommand():
+def endCommand():
     global egg
     
     print("")
     sleep(delay)
     egg = False
+
 while dateValid == True:
     userCom = "null"
     userCom = input("> ")
@@ -32,102 +33,108 @@ while dateValid == True:
         if userCom == "/add":
             enteredPass = getpass("This command requires a password to execute: ")
             if enteredPass == password:
-                CountAdd()
-                EndCommand()
+                countAdd()
+                endCommand()
             else:
                 print("Invalid Password")
-                EndCommand()
+                endCommand()
         
         elif userCom == "/add+":
             enteredPass = getpass("This command requires a password to execute: ")
             if enteredPass == password:
-                CountAddMult()
-                EndCommand()
+                countAddMult()
+                endCommand()
             else:
                 print("Invalid Password")
-                EndCommand()
+                endCommand()
         
         elif userCom == "/sub":
             enteredPass = getpass("This command requires a password to execute: ")
             if enteredPass == password:
-                CountSub()
-                EndCommand()
+                countSub()
+                endCommand()
             else:
                 print("Invalid Password")
-                EndCommand()
+                endCommand()
         
         elif userCom == "/sub+":
             enteredPass = getpass("This command requires a password to execute: ")
             if enteredPass == password:
-                CountSubMult()
-                EndCommand()
+                countSubMult()
+                endCommand()
             else:
                 print("Invalid Password")
-                EndCommand()
+                endCommand()
 
         elif userCom == "/reset":
             enteredPass = getpass("This command requires a password to execute: ")
             if enteredPass == password:
-                Reset()
+                reset()
                 reportChoice = input("Do you want to file a report? (Y/N): ")
                 if reportChoice.capitalize() == "Y":
-                    WriteReport()
+                    writeReport()
                 elif reportChoice.capitalize() == "N":
                     print("A report will not be filed")
                 else:
                     print("ERROR: Invalid response")
                     print("A report will not be filed")
-                EndCommand()
+                endCommand()
             else:
                 print("Invalid Password")
-                EndCommand()
+                endCommand()
 
         elif userCom == "/set":
             enteredPass = getpass("This command requires a password to execute: ")
             if enteredPass == password:
-                Set()
-                EndCommand()
+                setCount()
+                endCommand()
             else:
                 print("Invalid Password")
-                EndCommand()
+                endCommand()
 
         elif userCom == "/kill":
             enteredPass = getpass("This command requires a password to execute: ")
             if enteredPass == password:
-                Kill()
-                EndCommand()
+                kill()
+                endCommand()
             else:
                 print("Invalid Password")
-                EndCommand()
+                endCommand()
             
         elif userCom == "/print":
-            PrintDays()
-            EndCommand()
+            printDays()
+            endCommand()
 
         elif userCom == "/info":
-            ComInfo()
-            EndCommand()
+            comInfo()
+            endCommand()
 
         elif userCom == "/date":
-            OpenDateLog()
-            EndCommand()
+            openDateLog()
+            endCommand()
 
         elif userCom == "/report":
-            OpenReportLog()
-            EndCommand()
+            openReportLog()
+            endCommand()
 
         elif userCom == "/report+":
-            ReadReport()
-            EndCommand()
+            readReport()
+            endCommand()
 
         elif userCom == "/report++":
             enteredPass = getpass("This command requires a password to execute: ")
             if enteredPass == password:
-                WriteReport()
-                EndCommand()
+                writeReport()
+                endCommand()
             else:
                 print("Invalid Password")
-                EndCommand()
+                endCommand()
+
+        elif userCom == "/update":
+            #display_alt.setDisplay(char)
+            print("The LED Display has been updated to the current day count")
+            endCommand()
+
         else:
-            Invalid()
-            EndCommand()
+            invalid()
+            endCommand()

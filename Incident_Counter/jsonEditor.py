@@ -1,6 +1,6 @@
 import json
 
-def ReadReport():
+def readReport():
     try:
         index = int(input("Input entry number: "))
         with open('incident_log.json', 'r') as myfile:
@@ -15,11 +15,11 @@ def ReadReport():
             print("Type: {}".format(obj['reports'][index]['incidentType']))
             print("Info: {}".format(obj['reports'][index]['otherInfo']))
     except:
-        input("ERROR: Argument is not an intiger")
+        print("ERROR: Argument is not an intiger or requested report does not exist")
     
 
 
-def WriteReport():
+def writeReport():
     
     nameInput = input("Who was hurt?                       ")
     dateInput = input("What day did this happen?           ")

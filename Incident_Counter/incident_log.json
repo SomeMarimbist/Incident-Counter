@@ -1,34 +1,10 @@
 {
     "reports": [
         {
-            "name": "Person A",
-            "date": "Unknown",
-            "incidentType": "Cut",
-            "otherInfo": "Cut his finger on his PC"
-        },
-        {
-            "name": "Person A",
-            "date": "Unknown",
-            "incidentType": "Combustion",
-            "otherInfo": "PSU Combusted under his operation"
-        },
-        {
-            "name": "Person B",
-            "date": "Unknown",
-            "incidentType": "Combustion",
-            "otherInfo": "PSU Combusted under his operation"
-        },
-        {
-            "name": "Luke",
-            "date": "8-18-2020",
-            "incidentType": "Yes",
-            "otherInfo": "he Ded"
-        },
-        {
-            "name": "Luke",
-            "date": "Tomorrow",
-            "incidentType": "Combustion",
-            "otherInfo": "He did it again"
+            "name": "Test",
+            "date": "8-25-2020",
+            "incidentType": "Test",
+            "otherInfo": "Test Report"
         }
     ]
 }
