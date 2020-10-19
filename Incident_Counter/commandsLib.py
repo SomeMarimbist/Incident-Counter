@@ -105,7 +105,7 @@ def countSubMult():
         
 def reset():
     from datetime import datetime
-
+    display_alt.setDisplay(0)
     resetDT = datetime.now()
 
     with open('data2.txt', 'w') as f:
