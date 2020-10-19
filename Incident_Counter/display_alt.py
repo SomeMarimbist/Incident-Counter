@@ -1,7 +1,8 @@
 import board
 import neopixel
+import time
 
-leds = neopixel.NeoPixel(board.D18, 63, bpp=3)
+leds = neopixel.NeoPixel(board.D18, 63, bpp=3, auto_write = False)
 
 
 def off():
@@ -10,8 +11,7 @@ def off():
 
 def on(lightNum, digit):
     for i in range(3):
-        leds[digit*21 + (lightNum*3) + i] = (255, 0, 0)
-        print(lightNum)
+        leds[(digit*21) + (lightNum*3) + i] = (255, 0, 0)
 
 
 def setDisplay(number):
@@ -21,6 +21,8 @@ def setDisplay(number):
     for i in range(length):
         split[(3 - length + i)] = temp[i]
     off()
+    if split == [0, 6, 9]:
+        rainbow()
     for place in range(3):
         if split[place] == 0:
             on(0, place)
@@ -81,5 +83,39 @@ def setDisplay(number):
             on(5, place)
             on(0, place)
             on(1, place)
-        leds.show()
+    leds.show()
 
+def rainbow():
+    while True:
+        for j in range(255):
+            for i in range(63):
+                pixel_index = (i * 256 // 63) + j
+                leds[i] = wheel(pixel_index & 255)
+            for j in range(18, 21):
+                leds[j] = (0,0,0)
+            for j in range(36, 39):
+                leds[j] = (0,0,0)
+            for j in range(48, 51):
+                leds[j] = (0,0,0)
+            
+            leds.show()
+            time.sleep(0.01)
+#Wheel is used by the rainbow to...rainbow
+def wheel(pos):
+    if pos < 0 or pos > 255:
+        r = g = b = 0
+    elif pos < 85:
+        r = int(pos * 3)
+        g = int(255 - pos * 3)
+        b = 0
+    elif pos < 170:
+        pos -= 85
+        r = int(255 - pos * 3)
+        g = 0
+        b = int(pos * 3)
+    else:
+        pos -= 170
+        r = 0
+        g = int(pos * 3)
+        b = int(255 - pos * 3)
+    return (r, g, b)
