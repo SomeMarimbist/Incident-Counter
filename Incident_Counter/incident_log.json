@@ -1,10 +1,16 @@
 {
     "reports": [
         {
-            "name": "Test",
-            "date": "8-25-2020",
+            "name": "Runthrough",
+            "date": "10-21-2020",
+            "incidentType": "test",
+            "otherInfo": "N/A"
+        },
+        {
+            "name": "Showcase",
+            "date": "10-21-2020",
             "incidentType": "Test",
-            "otherInfo": "Test Report"
+            "otherInfo": "N/A"
         }
     ]
 }

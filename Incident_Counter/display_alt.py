@@ -99,7 +99,7 @@ def rainbow():
                 leds[j] = (0,0,0)
             
             leds.show()
-            time.sleep(0.01)
+            time.sleep(0.001)
 #Wheel is used by the rainbow to...rainbow
 def wheel(pos):
     if pos < 0 or pos > 255:
